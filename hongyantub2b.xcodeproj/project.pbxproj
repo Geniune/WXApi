@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1850751C212E4F8800D29F34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1850751B212E4F8800D29F34 /* AppDelegate.m */; };
+		1850751F212E4F8800D29F34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1850751E212E4F8800D29F34 /* ViewController.m */; };
+		18507522212E4F8800D29F34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18507520212E4F8800D29F34 /* Main.storyboard */; };
+		18507524212E4F8D00D29F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18507523212E4F8D00D29F34 /* Assets.xcassets */; };
+		18507527212E4F8D00D29F34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18507525212E4F8D00D29F34 /* LaunchScreen.storyboard */; };
+		1850752A212E4F8D00D29F34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18507529212E4F8D00D29F34 /* main.m */; };
+		1850753D212E5E4E00D29F34 /* WXAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 1850753C212E5E4E00D29F34 /* WXAuth.m */; };
+		18507540212E5F6D00D29F34 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1850753F212E5F6D00D29F34 /* Security.framework */; };
+		18507542212E5F7300D29F34 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18507541212E5F7300D29F34 /* CFNetwork.framework */; };
+		18507544212E5F7A00D29F34 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18507543212E5F7900D29F34 /* CoreTelephony.framework */; };
+		18507546212E5F7F00D29F34 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18507545212E5F7F00D29F34 /* SystemConfiguration.framework */; };
+		18507548212E5F8900D29F34 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18507547212E5F8900D29F34 /* libz.tbd */; };
+		1850754A212E5F8F00D29F34 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18507549212E5F8F00D29F34 /* libsqlite3.0.tbd */; };
+		1850754C212E5F9500D29F34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1850754B212E5F9500D29F34 /* UIKit.framework */; };
+		1850754E212E5F9C00D29F34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1850754D212E5F9B00D29F34 /* Foundation.framework */; };
+		18507558212E600D00D29F34 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18507550212E600D00D29F34 /* libWeChatSDK.a */; };
+		18507559212E600D00D29F34 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18507551212E600D00D29F34 /* read_me.txt */; };
+		1850755A212E600D00D29F34 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18507552212E600D00D29F34 /* README.txt */; };
+		1850755B212E600D00D29F34 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18507556212E600D00D29F34 /* WXApiManager.m */; };
+		1850755F212E78FE00D29F34 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1850755E212E78FE00D29F34 /* libc++abi.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18507517212E4F8800D29F34 /* hongyantub2b.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hongyantub2b.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1850751A212E4F8800D29F34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1850751B212E4F8800D29F34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1850751D212E4F8800D29F34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1850751E212E4F8800D29F34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18507521212E4F8800D29F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18507523212E4F8D00D29F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18507526212E4F8D00D29F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18507528212E4F8D00D29F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18507529212E4F8D00D29F34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1850753B212E5E4E00D29F34 /* WXAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXAuth.h; sourceTree = "<group>"; };
+		1850753C212E5E4E00D29F34 /* WXAuth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXAuth.m; sourceTree = "<group>"; };
+		1850753F212E5F6D00D29F34 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		18507541212E5F7300D29F34 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		18507543212E5F7900D29F34 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		18507545212E5F7F00D29F34 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		18507547212E5F8900D29F34 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		18507549212E5F8F00D29F34 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		1850754B212E5F9500D29F34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1850754D212E5F9B00D29F34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		18507550212E600D00D29F34 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		18507551212E600D00D29F34 /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		18507552212E600D00D29F34 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		18507553212E600D00D29F34 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		18507554212E600D00D29F34 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		18507555212E600D00D29F34 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
+		18507556212E600D00D29F34 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
+		18507557212E600D00D29F34 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		1850755C212E611500D29F34 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		1850755E212E78FE00D29F34 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18507514212E4F8800D29F34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1850755F212E78FE00D29F34 /* libc++abi.tbd in Frameworks */,
+				18507544212E5F7A00D29F34 /* CoreTelephony.framework in Frameworks */,
+				1850754E212E5F9C00D29F34 /* Foundation.framework in Frameworks */,
+				1850754C212E5F9500D29F34 /* UIKit.framework in Frameworks */,
+				18507558212E600D00D29F34 /* libWeChatSDK.a in Frameworks */,
+				1850754A212E5F8F00D29F34 /* libsqlite3.0.tbd in Frameworks */,
+				18507548212E5F8900D29F34 /* libz.tbd in Frameworks */,
+				18507546212E5F7F00D29F34 /* SystemConfiguration.framework in Frameworks */,
+				18507542212E5F7300D29F34 /* CFNetwork.framework in Frameworks */,
+				18507540212E5F6D00D29F34 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1850750E212E4F8800D29F34 = {
+			isa = PBXGroup;
+			children = (
+				1850754F212E600D00D29F34 /* WechtSDK1.8.2 */,
+				18507519212E4F8800D29F34 /* hongyantub2b */,
+				18507518212E4F8800D29F34 /* Products */,
+				1850753E212E5F6C00D29F34 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18507518212E4F8800D29F34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18507517212E4F8800D29F34 /* hongyantub2b.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18507519212E4F8800D29F34 /* hongyantub2b */ = {
+			isa = PBXGroup;
+			children = (
+				1850751A212E4F8800D29F34 /* AppDelegate.h */,
+				1850751B212E4F8800D29F34 /* AppDelegate.m */,
+				1850751D212E4F8800D29F34 /* ViewController.h */,
+				1850751E212E4F8800D29F34 /* ViewController.m */,
+				1850753B212E5E4E00D29F34 /* WXAuth.h */,
+				1850753C212E5E4E00D29F34 /* WXAuth.m */,
+				18507520212E4F8800D29F34 /* Main.storyboard */,
+				18507523212E4F8D00D29F34 /* Assets.xcassets */,
+				18507525212E4F8D00D29F34 /* LaunchScreen.storyboard */,
+				18507528212E4F8D00D29F34 /* Info.plist */,
+				18507529212E4F8D00D29F34 /* main.m */,
+			);
+			path = hongyantub2b;
+			sourceTree = "<group>";
+		};
+		1850753E212E5F6C00D29F34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1850755E212E78FE00D29F34 /* libc++abi.tbd */,
+				1850755C212E611500D29F34 /* libc++.tbd */,
+				1850754D212E5F9B00D29F34 /* Foundation.framework */,
+				1850754B212E5F9500D29F34 /* UIKit.framework */,
+				18507549212E5F8F00D29F34 /* libsqlite3.0.tbd */,
+				18507547212E5F8900D29F34 /* libz.tbd */,
+				18507545212E5F7F00D29F34 /* SystemConfiguration.framework */,
+				18507543212E5F7900D29F34 /* CoreTelephony.framework */,
+				18507541212E5F7300D29F34 /* CFNetwork.framework */,
+				1850753F212E5F6D00D29F34 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1850754F212E600D00D29F34 /* WechtSDK1.8.2 */ = {
+			isa = PBXGroup;
+			children = (
+				18507550212E600D00D29F34 /* libWeChatSDK.a */,
+				18507551212E600D00D29F34 /* read_me.txt */,
+				18507552212E600D00D29F34 /* README.txt */,
+				18507553212E600D00D29F34 /* WechatAuthSDK.h */,
+				18507554212E600D00D29F34 /* WXApi.h */,
+				18507555212E600D00D29F34 /* WXApiManager.h */,
+				18507556212E600D00D29F34 /* WXApiManager.m */,
+				18507557212E600D00D29F34 /* WXApiObject.h */,
+			);
+			path = WechtSDK1.8.2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18507516212E4F8800D29F34 /* hongyantub2b */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1850752D212E4F8D00D29F34 /* Build configuration list for PBXNativeTarget "hongyantub2b" */;
+			buildPhases = (
+				18507513212E4F8800D29F34 /* Sources */,
+				18507514212E4F8800D29F34 /* Frameworks */,
+				18507515212E4F8800D29F34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hongyantub2b;
+			productName = hongyantub2b;
+			productReference = 18507517212E4F8800D29F34 /* hongyantub2b.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1850750F212E4F8800D29F34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					18507516212E4F8800D29F34 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 18507512212E4F8800D29F34 /* Build configuration list for PBXProject "hongyantub2b" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1850750E212E4F8800D29F34;
+			productRefGroup = 18507518212E4F8800D29F34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18507516212E4F8800D29F34 /* hongyantub2b */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18507515212E4F8800D29F34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18507527212E4F8D00D29F34 /* LaunchScreen.storyboard in Resources */,
+				18507524212E4F8D00D29F34 /* Assets.xcassets in Resources */,
+				18507559212E600D00D29F34 /* read_me.txt in Resources */,
+				18507522212E4F8800D29F34 /* Main.storyboard in Resources */,
+				1850755A212E600D00D29F34 /* README.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18507513212E4F8800D29F34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1850753D212E5E4E00D29F34 /* WXAuth.m in Sources */,
+				1850751F212E4F8800D29F34 /* ViewController.m in Sources */,
+				1850752A212E4F8D00D29F34 /* main.m in Sources */,
+				1850755B212E600D00D29F34 /* WXApiManager.m in Sources */,
+				1850751C212E4F8800D29F34 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18507520212E4F8800D29F34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18507521212E4F8800D29F34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18507525212E4F8D00D29F34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18507526212E4F8D00D29F34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1850752B212E4F8D00D29F34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1850752C212E4F8D00D29F34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1850752E212E4F8D00D29F34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = hongyantub2b/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WechtSDK1.8.2",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = hongyantub2b;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1850752F212E4F8D00D29F34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = hongyantub2b/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WechtSDK1.8.2",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = hongyantub2b;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18507512212E4F8800D29F34 /* Build configuration list for PBXProject "hongyantub2b" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1850752B212E4F8D00D29F34 /* Debug */,
+				1850752C212E4F8D00D29F34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1850752D212E4F8D00D29F34 /* Build configuration list for PBXNativeTarget "hongyantub2b" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1850752E212E4F8D00D29F34 /* Debug */,
+				1850752F212E4F8D00D29F34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1850750F212E4F8800D29F34 /* Project object */;
+}
