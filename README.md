@@ -1,5 +1,5 @@
 # WXApi
-微信第三方授权登录功能示例
+微信第三方授权登录功能示例，简书贴：https://www.jianshu.com/p/a8d572751e5f
 
 update at 2018-08-23
 
