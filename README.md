@@ -1,5 +1,5 @@
 # WXApi
-UNIVERSALLINK
+
 如何配置Universal Links，请看：https://www.jianshu.com/p/10ce6aa70e61
 
 分享、授权登录功能，请看：https://www.jianshu.com/p/a8d572751e5f
