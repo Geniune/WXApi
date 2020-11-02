@@ -9,10 +9,10 @@
 #import "AppDelegate.h"
 #import "HomePageViewController.h"
 
-#import "WXAPI/WXApi.h"
+#import "WXApi.h"
 
-#define WXAppId            @"wx0860cd14939708ef"    //App ID
-#define UNIVERSALLINK           @"https://wwwtest.asiacoat.com/" //Universal Links
+#define WXAppId            @"wx123456789"    //App ID
+#define UNIVERSALLINK           @"https://www.google.com/wx_conn/" //Universal Links
 
 @interface AppDelegate ()<WXApiDelegate>
 
@@ -47,19 +47,16 @@
 }
 
 #pragma mark - 第三方分享、登录回调
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    
-    return [WXApi handleOpenURL:url delegate:self];
-}
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options{
     
     return [WXApi handleOpenURL:url delegate:self];
 }
 
 #pragma mark Universal Link
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray<id<UIUserActivityRestoring>> * __nullable restorableObjects))restorationHandler {
-    
+
+    NSURL *url = userActivity.webpageURL;
+    NSLog(@"%@", url.description);
     return [WXApi handleOpenUniversalLink:userActivity delegate:self];
 }
 
