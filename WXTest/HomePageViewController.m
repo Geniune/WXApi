@@ -7,9 +7,11 @@
 //
 
 #import "HomePageViewController.h"
-#import "WXApi.h"
+#import "OpenManager.h"
 
 @interface HomePageViewController ()
+
+@property (nonatomic, strong) WebShareModel *media_model;
 
 @end
 
@@ -20,55 +22,85 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 150, 38)];
-    [btn1 setTitle:@"微信分享" forState:UIControlStateNormal];
-    [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [btn1 addTarget:self action:@selector(shareAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn1];
+    //由于微信登录只提供了原生登录方式，根据审核指南中的相关规定，建议在初始化页面时就检查当前设备是否已安装对应客户端应用
+    //若当前设备未安装客户端，则需要将对应UI交互入口隐藏，避免后期打包提交审核时被拒绝
     
-    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, 150, 38)];
-    [btn2 setTitle:@"微信登录" forState:UIControlStateNormal];
-    [btn2 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [btn2 addTarget:self action:@selector(authAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn2];
-}
+    if([OPENSDKMANAGER WXAppInstalled]){ //判断当前设备是否已安装微信客户端
 
-- (void)shareAction:(id)sender{
-    
-    SendMessageToWXReq *sendReq = [[SendMessageToWXReq alloc] init];
-    sendReq.bText = NO;//不使用文本信息
-    sendReq.scene = 0;//0.好友列表 1.朋友圈 2.收藏
-    
-    //创建分享内容对象
-    WXMediaMessage *urlMessage = [WXMediaMessage message];
-    urlMessage.title = @"标题";//标题
-    urlMessage.description = @"描述内容";//描述内容
-    [urlMessage setThumbImage:[UIImage imageNamed:@"expert_placeholder"]];//设置图片
-    
-    //创建多媒体对象
-    WXWebpageObject *webObj = [WXWebpageObject object];
-    webObj.webpageUrl = @"https://www.baidu.com/";//URL链接
-    
-    //完成发送对象实例
-    urlMessage.mediaObject = webObj;
-    sendReq.message = urlMessage;
-    
-    //发送请求
-     [WXApi sendReq:sendReq completion:^(BOOL success) {
-         NSLog(@"唤起微信:%@", success ? @"成功" : @"失败");
-     }];
-}
-
-- (void)authAction:(id)sender{
+        UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 150, 38)];
+        [btn1 setTitle:@"微信登录" forState:UIControlStateNormal];
+        [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [btn1 addTarget:self action:@selector(wxAuthAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:btn1];
         
-    SendAuthReq *req = [[SendAuthReq alloc] init];
-    req.state = @"wx_oauth_authorization_state";//用于保持请求和回调的状态，授权请求或原样带回
-    req.scope = @"snsapi_userinfo";//授权作用域：获取用户个人信息
+        UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(50, 150, 150, 38)];
+        [btn2 setTitle:@"微信分享" forState:UIControlStateNormal];
+        [btn2 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [btn2 addTarget:self action:@selector(wxShareAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:btn2];
+        
+    }else{
+        
+        DebugLog(@"当前设备还未安装微信客户端或版本过低");
+    }
     
-    //发送请求
-    [WXApi sendReq:req completion:^(BOOL success) {
-        NSLog(@"唤起微信:%@", success ? @"成功" : @"失败");
-    }];
+    if([OPENSDKMANAGER WWAppInstalled]){ //判断当前设备是否已安装企业微信客户端
+
+        UIButton *btn3 = [[UIButton alloc] initWithFrame:CGRectMake(50, 200, 150, 38)];
+        [btn3 setTitle:@"企业微信登录" forState:UIControlStateNormal];
+        [btn3 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [btn3 addTarget:self action:@selector(wwAuthAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:btn3];
+        
+        UIButton *btn4 = [[UIButton alloc] initWithFrame:CGRectMake(50, 250, 150, 38)];
+        [btn4 setTitle:@"企业微信分享" forState:UIControlStateNormal];
+        [btn4 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [btn4 addTarget:self action:@selector(wwShareAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:btn4];
+        
+    }else{
+        
+        DebugLog(@"当前设备还未安装企业微信客户端或版本过低");
+    }
+}
+
+#pragma mark - 微信授权登录Action
+- (void)wxAuthAction:(id)sender{
+    
+    [OPENSDKMANAGER WXAuth];
+}
+
+#pragma mark - 微信分享Action
+- (void)wxShareAction:(id)sender{
+
+    [OPENSDKMANAGER WXShare:self.media_model];
+}
+
+#pragma mark - 企业微信授权登录Action
+- (void)wwAuthAction:(id)sender{
+    
+    [OPENSDKMANAGER WWAuth];
+}
+
+#pragma mark - 企业微信分享Action
+- (void)wwShareAction:(id)sender{
+
+    [OPENSDKMANAGER WWShare:self.media_model];
+}
+
+#pragma mark - 分享媒体Model 懒加载
+- (WebShareModel *)media_model{
+    
+    if(!_media_model){
+        
+        _media_model = [WebShareModel new];
+        _media_model.title = @"清新持久自然GUCCMI香水";
+        _media_model.content = @"【分享到微信】";
+        _media_model.image = [UIImage imageNamed:@"res2.png"];
+        _media_model.url = @"https://open.weixin.qq.com";
+    }
+    
+    return _media_model;
 }
 
 /*

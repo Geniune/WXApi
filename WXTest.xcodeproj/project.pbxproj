@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1827D4EB25E0E9C200200E41 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1827D4EA25E0E9C200200E41 /* LocalAuthentication.framework */; };
+		1882269D25E881DC0013A936 /* libWXWorkApi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1882269A25E881DB0013A936 /* libWXWorkApi.a */; };
+		188226A225E886A70013A936 /* OpenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 188226A125E886A70013A936 /* OpenManager.m */; };
+		188226A525E88F2C0013A936 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188226A425E88F2C0013A936 /* UIKit.framework */; };
 		18F32BED2472708E005D5244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F32BEC2472708E005D5244 /* AppDelegate.m */; };
 		18F32BF32472708E005D5244 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F32BF22472708E005D5244 /* ViewController.m */; };
 		18F32BF824727098005D5244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F32BF724727098005D5244 /* Assets.xcassets */; };
 		18F32BFB24727098005D5244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F32BF924727098005D5244 /* LaunchScreen.storyboard */; };
 		18F32BFE24727098005D5244 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F32BFD24727098005D5244 /* main.m */; };
-		18F32C0C247270E3005D5244 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18F32C09247270E3005D5244 /* README.txt */; };
 		18F32C0D247270E3005D5244 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F32C0B247270E3005D5244 /* libWeChatSDK.a */; };
 		18F32C1424727375005D5244 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F32C1324727375005D5244 /* Security.framework */; };
 		18F32C162472737E005D5244 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F32C152472737E005D5244 /* CoreGraphics.framework */; };
@@ -22,6 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1827D4EA25E0E9C200200E41 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		1882269A25E881DB0013A936 /* libWXWorkApi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWXWorkApi.a; sourceTree = "<group>"; };
+		1882269B25E881DB0013A936 /* WWKApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWKApi.h; sourceTree = "<group>"; };
+		1882269C25E881DB0013A936 /* WWKApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWKApiObject.h; sourceTree = "<group>"; };
+		188226A025E886A70013A936 /* OpenManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenManager.h; sourceTree = "<group>"; };
+		188226A125E886A70013A936 /* OpenManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenManager.m; sourceTree = "<group>"; };
+		188226A425E88F2C0013A936 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		188226A725E898120013A936 /* SystemMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemMacro.h; sourceTree = "<group>"; };
+		188226A825E898290013A936 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18F32BE82472708E005D5244 /* WXTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F32BEB2472708E005D5244 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18F32BEC2472708E005D5244 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,7 +45,6 @@
 		18F32BFD24727098005D5244 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18F32C07247270E3005D5244 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		18F32C08247270E3005D5244 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		18F32C09247270E3005D5244 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		18F32C0A247270E3005D5244 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		18F32C0B247270E3005D5244 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		18F32C0E24727181005D5244 /* 测测分享.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "测测分享.entitlements"; sourceTree = "<group>"; };
@@ -51,9 +62,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F32C162472737E005D5244 /* CoreGraphics.framework in Frameworks */,
+				188226A525E88F2C0013A936 /* UIKit.framework in Frameworks */,
 				18F32C1A2472753F005D5244 /* libc++.tbd in Frameworks */,
 				18F32C1424727375005D5244 /* Security.framework in Frameworks */,
+				1882269D25E881DC0013A936 /* libWXWorkApi.a in Frameworks */,
 				18F32C1824727382005D5244 /* WebKit.framework in Frameworks */,
+				1827D4EB25E0E9C200200E41 /* LocalAuthentication.framework in Frameworks */,
 				18F32C0D247270E3005D5244 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +75,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1882269925E881DB0013A936 /* WWKAPI */ = {
+			isa = PBXGroup;
+			children = (
+				1882269A25E881DB0013A936 /* libWXWorkApi.a */,
+				1882269B25E881DB0013A936 /* WWKApi.h */,
+				1882269C25E881DB0013A936 /* WWKApiObject.h */,
+			);
+			path = WWKAPI;
+			sourceTree = "<group>";
+		};
 		18F32BDF2472708E005D5244 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				18F32C0E24727181005D5244 /* 测测分享.entitlements */,
+				1882269925E881DB0013A936 /* WWKAPI */,
 				18F32C06247270E3005D5244 /* WXAPI */,
 				18F32BEB2472708E005D5244 /* AppDelegate.h */,
 				18F32BEC2472708E005D5244 /* AppDelegate.m */,
@@ -89,6 +114,10 @@
 				18F32BF22472708E005D5244 /* ViewController.m */,
 				18F32C1B247275B7005D5244 /* HomePageViewController.h */,
 				18F32C1C247275B7005D5244 /* HomePageViewController.m */,
+				188226A025E886A70013A936 /* OpenManager.h */,
+				188226A125E886A70013A936 /* OpenManager.m */,
+				188226A725E898120013A936 /* SystemMacro.h */,
+				188226A825E898290013A936 /* PrefixHeader.pch */,
 				18F32BF724727098005D5244 /* Assets.xcassets */,
 				18F32BF924727098005D5244 /* LaunchScreen.storyboard */,
 				18F32BFC24727098005D5244 /* Info.plist */,
@@ -102,7 +131,6 @@
 			children = (
 				18F32C07247270E3005D5244 /* WXApi.h */,
 				18F32C08247270E3005D5244 /* WXApiObject.h */,
-				18F32C09247270E3005D5244 /* README.txt */,
 				18F32C0A247270E3005D5244 /* WechatAuthSDK.h */,
 				18F32C0B247270E3005D5244 /* libWeChatSDK.a */,
 			);
@@ -112,6 +140,8 @@
 		18F32C1224727375005D5244 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				188226A425E88F2C0013A936 /* UIKit.framework */,
+				1827D4EA25E0E9C200200E41 /* LocalAuthentication.framework */,
 				18F32C1924727538005D5244 /* libc++.tbd */,
 				18F32C1724727382005D5244 /* WebKit.framework */,
 				18F32C152472737E005D5244 /* CoreGraphics.framework */,
@@ -179,7 +209,6 @@
 			files = (
 				18F32BFB24727098005D5244 /* LaunchScreen.storyboard in Resources */,
 				18F32BF824727098005D5244 /* Assets.xcassets in Resources */,
-				18F32C0C247270E3005D5244 /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +222,7 @@
 				18F32BF32472708E005D5244 /* ViewController.m in Sources */,
 				18F32BED2472708E005D5244 /* AppDelegate.m in Sources */,
 				18F32C1D247275B7005D5244 /* HomePageViewController.m in Sources */,
+				188226A225E886A70013A936 /* OpenManager.m in Sources */,
 				18F32BFE24727098005D5244 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +360,9 @@
 				CODE_SIGN_ENTITLEMENTS = "WXTest/测测分享.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = MB8YH4F5W6;
+				DEVELOPMENT_TEAM = E6C28568T3;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WXTest/PrefixHeader.pch";
 				INFOPLIST_FILE = WXTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -340,14 +372,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WXTest/WXAPI",
+					"$(PROJECT_DIR)/WXTest/WWKAPI",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.geniune.WXTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hongyantu.qyt;
 				PRODUCT_NAME = WXTest;
-				PROVISIONING_PROFILE_SPECIFIER = CoatingOnline_Development;
+				PROVISIONING_PROFILE_SPECIFIER = qyt_Development;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -359,7 +392,9 @@
 				CODE_SIGN_ENTITLEMENTS = "WXTest/测测分享.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = MB8YH4F5W6;
+				DEVELOPMENT_TEAM = E6C28568T3;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WXTest/PrefixHeader.pch";
 				INFOPLIST_FILE = WXTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -369,14 +404,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WXTest/WXAPI",
+					"$(PROJECT_DIR)/WXTest/WWKAPI",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.geniune.WXTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hongyantu.qyt;
 				PRODUCT_NAME = WXTest;
-				PROVISIONING_PROFILE_SPECIFIER = CoatingOnline_Development;
+				PROVISIONING_PROFILE_SPECIFIER = qyt_Development;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
