@@ -28,6 +28,19 @@
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
+    NSDictionary *dictionary = [launchOptions objectForKey:UIApplicationLaunchOptionsUserActivityDictionaryKey];
+    NSURL *url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
+    
+    if(dictionary){
+        
+        NSUserActivity *userActivity = [dictionary objectForKey:@"UIApplicationLaunchOptionsUserActivityKey"];
+        [OPENSDKMANAGER handleOpenUniversalLink:userActivity];
+    }
+    
+    if(url){
+        [OPENSDKMANAGER handleOpenURL:url];
+    }
+    
     return YES;
 }
 

@@ -27,18 +27,26 @@
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wxc59dd02308069db4</string>
+				<string>wxca5f2191000014</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>wwauth</string>
+			<string>wxwork</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>wwauth700000a5f2191000014</string>
 			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array/>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
@@ -47,6 +55,8 @@
 	<array>
 		<string>weixinULAPI</string>
 		<string>weixin</string>
+		<string>wxwork</string>
+		<string>wxworklocal</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

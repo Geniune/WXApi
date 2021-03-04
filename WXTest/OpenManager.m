@@ -26,8 +26,8 @@ _sharedObject = block(); \
 return _sharedObject; \
 
 //微信
-#define WX_AppID            @"wxc59dd02308069db4"//app id
-#define WX_UniversalLink           @"https://www.hongyantu.com/wx_conn/qyt/"//universal link
+#define WX_AppID            @"wxca5f2191000014"
+#define WX_UniversalLink           @"https://www.google.com/wx_conn/1000014/"
 
 //企业微信
 //用户填写第三方应用Bundle Id完成上述注册流程后，系统根据corpId(企业ID 见下描述)与agentId(应用ID 见下描述)计算得到的一个schema字符串。用于企业微信完成SSO登录流程后回调返回用户的第三方应用
@@ -64,12 +64,15 @@ return _sharedObject; \
     
     [WXApi registerApp:WX_AppID universalLink:WX_UniversalLink];
     
-    [WWKApi registerApp:WW_AppID corpId:WW_CorpID agentId:WW_AgentID];
-}
-
-- (BOOL)WXAppInstalled{
+    [WXApi checkUniversalLinkReady:^(WXULCheckStep step, WXCheckULStepResult * _Nonnull result) {
+        
+        if(!result.success){
+            DebugLog(@"step %zd", step);
+            DebugLog(@"%@", result.suggestion);
+        }
+    }];
     
-    return [WXApi isWXAppInstalled];
+    [WWKApi registerApp:WW_AppID corpId:WW_CorpID agentId:WW_AgentID];
 }
 
 - (BOOL)WWAppInstalled{
@@ -79,10 +82,9 @@ return _sharedObject; \
 
 - (void)WWAuth{
     
-    SendAuthReq *req = [[SendAuthReq alloc] init];
-    req.state = @"wx_oauth_authorization_state";
-    req.scope = @"snsapi_userinfo";
-    [WXApi sendReq:req completion:nil];
+    WWKSSOReq *req = [[WWKSSOReq alloc] init];
+    req.state = @"ww_oauth_authorization_state";
+    [WWKApi sendReq:req];
 }
 
 - (void)WWShare:(WebShareModel *)model{
@@ -99,11 +101,17 @@ return _sharedObject; \
     [WWKApi sendReq:req];
 }
 
+- (BOOL)WXAppInstalled{
+    
+    return [WXApi isWXAppInstalled];
+}
+
 - (void)WXAuth{
     
-    WWKSSOReq *req = [[WWKSSOReq alloc] init];
-    req.state = @"ww_oauth_authorization_state";
-    [WWKApi sendReq:req];
+    SendAuthReq *req = [[SendAuthReq alloc] init];
+    req.state = @"wx_oauth_authorization_state";
+    req.scope = @"snsapi_userinfo";
+    [WXApi sendReq:req completion:nil];
 }
 
 - (void)WXShare:(WebShareModel *)model{
@@ -129,15 +137,32 @@ return _sharedObject; \
 
 - (BOOL)handleOpenURL:(NSURL *)url{
     
-    DebugLog(@"%@", url.host);
-    DebugLog(@"%@", url.path);
+    if([url.scheme isEqualToString:WX_AppID]){
+        
+        return [WXApi handleOpenURL:url delegate:self];
+    }
+    if([url.scheme isEqualToString:WW_AppID]){
+        
+        return [WWKApi handleOpenURL:url delegate:self];
+    }
     
-    return [WWKApi handleOpenURL:url delegate:self] || [WXApi handleOpenURL:url delegate:self];
+    return NO;
 }
 
 - (BOOL)handleOpenUniversalLink:(NSUserActivity *)userActivity{
     
-    return [WXApi handleOpenUniversalLink:userActivity delegate:self];
+    if([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]){
+
+        if([userActivity.webpageURL.absoluteString containsString:WX_UniversalLink]){
+            
+            return [WXApi handleOpenUniversalLink:userActivity delegate:self];
+        }else{
+            
+            return NO;
+        }
+    }
+    
+    return NO;
 }
 
 //注意：“微信” 和 “企业微信” 走的回调方法是同一个
@@ -165,7 +190,7 @@ return _sharedObject; \
         
         if([rep.state isEqualToString:@"wx_oauth_authorization_state"]){
             
-            DebugLog(@"code：%@", rep.code);//获取到第一步code
+            [self showAlert:@"授权登录" message:[NSString stringWithFormat:@"code=%@", rep.code]];
         }
     }else if([resp isKindOfClass:[WWKSSOResp class]]){
         
@@ -177,7 +202,7 @@ return _sharedObject; \
         
         if([rep.state isEqualToString:@"ww_oauth_authorization_state"]){
             
-            DebugLog(@"code：%@", rep.code);//获取到第一步code
+            [self showAlert:@"授权登录" message:[NSString stringWithFormat:@"code=%@", rep.code]];
         }
     }else if([resp isKindOfClass:[WWKSendMessageResp class]]){
         
@@ -195,6 +220,15 @@ return _sharedObject; \
 - (void)onReq:(id)req {
     
     
+}
+
+- (void)showAlert:(NSString *)title message:(NSString *)message{
+    
+    UIAlertController *alert = [[UIAlertController alloc] init];
+    alert.title = title;
+    alert.message = message;
+    [alert addAction:[UIAlertAction actionWithTitle:@"关闭" style:UIAlertActionStyleCancel handler:nil]];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
 @end

@@ -25,9 +25,10 @@
     //由于微信登录只提供了原生登录方式，根据审核指南中的相关规定，建议在初始化页面时就检查当前设备是否已安装对应客户端应用
     //若当前设备未安装客户端，则需要将对应UI交互入口隐藏，避免后期打包提交审核时被拒绝
     
-    if([OPENSDKMANAGER WXAppInstalled]){ //判断当前设备是否已安装微信客户端
+    //判断当前设备是否已安装微信客户端
+    if([OPENSDKMANAGER WXAppInstalled]){
 
-        UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 150, 38)];
+        UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, 150, 38)];
         [btn1 setTitle:@"微信登录" forState:UIControlStateNormal];
         [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [btn1 addTarget:self action:@selector(wxAuthAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -44,7 +45,8 @@
         DebugLog(@"当前设备还未安装微信客户端或版本过低");
     }
     
-    if([OPENSDKMANAGER WWAppInstalled]){ //判断当前设备是否已安装企业微信客户端
+    //判断当前设备是否已安装企业微信客户端
+    if([OPENSDKMANAGER WWAppInstalled]){
 
         UIButton *btn3 = [[UIButton alloc] initWithFrame:CGRectMake(50, 200, 150, 38)];
         [btn3 setTitle:@"企业微信登录" forState:UIControlStateNormal];
