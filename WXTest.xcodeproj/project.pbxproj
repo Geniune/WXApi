@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1827D4EB25E0E9C200200E41 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1827D4EA25E0E9C200200E41 /* LocalAuthentication.framework */; };
 		1882269D25E881DC0013A936 /* libWXWorkApi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1882269A25E881DB0013A936 /* libWXWorkApi.a */; };
 		188226A225E886A70013A936 /* OpenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 188226A125E886A70013A936 /* OpenManager.m */; };
 		188226A525E88F2C0013A936 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188226A425E88F2C0013A936 /* UIKit.framework */; };
@@ -25,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180F448125F0B55800724145 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		180F448E25F0B83D00724145 /* CredentialProviderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CredentialProviderViewController.h; sourceTree = "<group>"; };
+		180F448F25F0B83D00724145 /* CredentialProviderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CredentialProviderViewController.m; sourceTree = "<group>"; };
+		180F449225F0B83D00724145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		180F449425F0B83D00724145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		180F449525F0B83D00724145 /* AutomaticallyFillPassword.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutomaticallyFillPassword.entitlements; sourceTree = "<group>"; };
 		1827D4EA25E0E9C200200E41 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		1882269A25E881DB0013A936 /* libWXWorkApi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWXWorkApi.a; sourceTree = "<group>"; };
 		1882269B25E881DB0013A936 /* WWKApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWKApi.h; sourceTree = "<group>"; };
@@ -67,7 +72,6 @@
 				18F32C1424727375005D5244 /* Security.framework in Frameworks */,
 				1882269D25E881DC0013A936 /* libWXWorkApi.a in Frameworks */,
 				18F32C1824727382005D5244 /* WebKit.framework in Frameworks */,
-				1827D4EB25E0E9C200200E41 /* LocalAuthentication.framework in Frameworks */,
 				18F32C0D247270E3005D5244 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +79,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180F448D25F0B83D00724145 /* AutomaticallyFillPassword */ = {
+			isa = PBXGroup;
+			children = (
+				180F448E25F0B83D00724145 /* CredentialProviderViewController.h */,
+				180F448F25F0B83D00724145 /* CredentialProviderViewController.m */,
+				180F449125F0B83D00724145 /* MainInterface.storyboard */,
+				180F449425F0B83D00724145 /* Info.plist */,
+				180F449525F0B83D00724145 /* AutomaticallyFillPassword.entitlements */,
+			);
+			path = AutomaticallyFillPassword;
+			sourceTree = "<group>";
+		};
 		1882269925E881DB0013A936 /* WWKAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				18F32BEA2472708E005D5244 /* WXTest */,
+				180F448D25F0B83D00724145 /* AutomaticallyFillPassword */,
 				18F32BE92472708E005D5244 /* Products */,
 				18F32C1224727375005D5244 /* Frameworks */,
 			);
@@ -140,6 +157,7 @@
 		18F32C1224727375005D5244 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				180F448125F0B55800724145 /* AuthenticationServices.framework */,
 				188226A425E88F2C0013A936 /* UIKit.framework */,
 				1827D4EA25E0E9C200200E41 /* LocalAuthentication.framework */,
 				18F32C1924727538005D5244 /* libc++.tbd */,
@@ -230,6 +248,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		180F449125F0B83D00724145 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				180F449225F0B83D00724145 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		18F32BF924727098005D5244 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -378,7 +404,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wechat.openSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.geniune.wxopen;
 				PRODUCT_NAME = WXTest;
 				PROVISIONING_PROFILE_SPECIFIER = qyt_Development;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -410,7 +436,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wechat.openSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.geniune.wxopen;
 				PRODUCT_NAME = WXTest;
 				PROVISIONING_PROFILE_SPECIFIER = qyt_Development;
 				TARGETED_DEVICE_FAMILY = "1,2";

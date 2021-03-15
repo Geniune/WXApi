@@ -26,14 +26,13 @@ _sharedObject = block(); \
 return _sharedObject; \
 
 //微信
-#define WX_AppID            @"wxca5f2191000014"
-#define WX_UniversalLink           @"https://www.google.com/wx_conn/1000014/"
+#define WX_AppID            @""//TODO:请开发人员填写
+#define WX_UniversalLink           @""//TODO:请开发人员填写
 
 //企业微信
-//用户填写第三方应用Bundle Id完成上述注册流程后，系统根据corpId(企业ID 见下描述)与agentId(应用ID 见下描述)计算得到的一个schema字符串。用于企业微信完成SSO登录流程后回调返回用户的第三方应用
-#define WW_AppID            @"wwauth700000a5f2191000014"//app id
-#define WW_CorpID            @"ww700000a5f2191"//用户登录企业管理页面的时候在 “我的企业” 页面会得到一个corpId，这个corpid即为需要填在这里的企业ID
-#define WW_AgentID            @"1000014"//当用户为自己企业新加一个第三方iOS应用的时候，系统会为每个iOS应用分配不同的企业内部唯一的应用ID
+#define WW_AppID            @"wwauth700000a5f2191000014"//TODO:请开发人员填写
+#define WW_CorpID            @"ww700000a5f2191"//TODO:请开发人员填写
+#define WW_AgentID            @"1000014"//TODO:请开发人员填写
 
 @interface OpenManager () <WXApiDelegate, WWKApiDelegate>
 
@@ -63,14 +62,6 @@ return _sharedObject; \
 - (void)setup{
     
     [WXApi registerApp:WX_AppID universalLink:WX_UniversalLink];
-    
-    [WXApi checkUniversalLinkReady:^(WXULCheckStep step, WXCheckULStepResult * _Nonnull result) {
-        
-        if(!result.success){
-            DebugLog(@"step %zd", step);
-            DebugLog(@"%@", result.suggestion);
-        }
-    }];
     
     [WWKApi registerApp:WW_AppID corpId:WW_CorpID agentId:WW_AgentID];
 }
@@ -128,7 +119,7 @@ return _sharedObject; \
     urlMessage.mediaObject = webObj;
 
     SendMessageToWXReq *sendReq = [[SendMessageToWXReq alloc] init];
-    sendReq.bText = NO;//不使用文本信息
+    sendReq.bText = NO;
     sendReq.message = urlMessage;
     sendReq.scene = WXSceneSession;//分享到好友会话
 

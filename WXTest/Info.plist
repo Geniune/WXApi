@@ -27,7 +27,7 @@
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wxca5f2191000014</string>
+				<string>wxa5f2191000014</string>
 			</array>
 		</dict>
 		<dict>
@@ -44,7 +44,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string></string>
+			<string>wxworklocal</string>
 			<key>CFBundleURLSchemes</key>
 			<array/>
 		</dict>

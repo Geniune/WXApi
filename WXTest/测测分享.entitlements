@@ -4,8 +4,8 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:www.google.com</string>
-		<string>webcredentials:www.google.com</string>
+		<string>applinks:www.baidu.com</string>
+		<string>webcredentials:www.baidu.com</string>
 	</array>
 </dict>
 </plist>

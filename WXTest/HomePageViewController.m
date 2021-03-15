@@ -22,7 +22,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    //由于微信登录只提供了原生登录方式，根据审核指南中的相关规定，建议在初始化页面时就检查当前设备是否已安装对应客户端应用
+    //注意：
+    //由于微信登录只提供了原生登录方式，根据审核指南中的相关规定，建议在初始化页面时检查当前设备是否已安装对应客户端应用
     //若当前设备未安装客户端，则需要将对应UI交互入口隐藏，避免后期打包提交审核时被拒绝
     
     //判断当前设备是否已安装微信客户端
@@ -64,6 +65,7 @@
         
         DebugLog(@"当前设备还未安装企业微信客户端或版本过低");
     }
+
 }
 
 #pragma mark - 微信授权登录Action
@@ -96,14 +98,15 @@
     if(!_media_model){
         
         _media_model = [WebShareModel new];
-        _media_model.title = @"清新持久自然GUCCMI香水";
-        _media_model.content = @"【分享到微信】";
-        _media_model.image = [UIImage imageNamed:@"res2.png"];
-        _media_model.url = @"https://open.weixin.qq.com";
+        _media_model.title = @"16英寸MacBook Pro今年下半年发布";
+        _media_model.content = @"据分析师郭明錤称，苹果正计划重新设计 14 英寸和 16 英寸的 MacBook Pro 机型，并将于 2021 年下半年发布";
+        _media_model.image = [UIImage imageNamed:@"chatu_login"];
+        _media_model.url = @"https://www.feng.com/post/13320156";
     }
     
     return _media_model;
 }
+
 
 /*
 #pragma mark - Navigation
