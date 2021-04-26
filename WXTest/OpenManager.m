@@ -30,9 +30,9 @@ return _sharedObject; \
 #define WX_UniversalLink           @""//TODO:请开发人员填写
 
 //企业微信
-#define WW_AppID            @"wwauth700000a5f2191000014"//TODO:请开发人员填写
-#define WW_CorpID            @"ww700000a5f2191"//TODO:请开发人员填写
-#define WW_AgentID            @"1000014"//TODO:请开发人员填写
+#define WW_AppID            @""//TODO:请开发人员填写
+#define WW_CorpID            @""//TODO:请开发人员填写
+#define WW_AgentID            @""//TODO:请开发人员填写
 
 @interface OpenManager () <WXApiDelegate, WWKApiDelegate>
 
